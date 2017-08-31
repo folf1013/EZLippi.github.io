@@ -1,6 +1,6 @@
 ---
 layout: post
-title: web实时推送之实时更新
+title: web实时推送
 description: websocket实现web实时推送
 keywords: websocket
 categories : [案例]
