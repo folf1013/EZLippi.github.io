@@ -22,6 +22,7 @@ id | 主键
 username | 用户名 
  
 抽奖记录表t_luckydraw
+
 属性 | 描述
 ---|---
 id | 主键
