@@ -16,12 +16,15 @@ sql中case when的语句用的较少，记录一下
 其中数据库中有俩张表
 
 用户表t_user
+
 属性 | 描述
 ---|---
 id | 主键
-username | 用户名 
+username | 用户名
+
  
 抽奖记录表t_luckydraw
+
 属性 | 描述
 ---|---
 id | 主键
@@ -29,6 +32,7 @@ cuser | 用户id
 ticket | 是否中奖（1中奖，-1未中奖）
 prize | 奖品类型代号(0：特等奖，其中3，4，5，6为积分)
 userid | 抽奖用户
+
 
 
 ```
