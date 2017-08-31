@@ -26,8 +26,7 @@ tags : [websocket]
 
 ```
 public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(myHandler(), "/socket.io/{kind}/{code}").setAllowedOrigins("*").addInterceptors
-            (myInterceptors()).withSockJS();
+    registry.addHandler(myHandler(), "/socket.io/{kind}/{code}")....
 }
 ```
 kind表示类别，code表示这个类别下的唯一标识，当kind标识面板时，code可以使用面板的id。只有kind和code都相同时，才是同一个面板。
@@ -43,6 +42,7 @@ socket服务器启动后，等待socket客户端的连接，每个客户端与�
 
 ## 压测
 websocket-bench命令可以模拟n个线程发送m个请求。
+
 
 # 注意事项
 - 通过压测，每个socket服务端实例可以同时建立2000个连接。多的连接会自动断掉。当连接数过多时，需要在一个服务器实例中起多个socket服务器实例。
