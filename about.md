@@ -6,7 +6,7 @@ title: "关于：About"
 ## 个人简介：
 
 * folf1013
-* Web后台开发,react前端开发，android开发爱好者
+* Web后台开发,react前端开发
 * 来自湖南 现居北京
 
 ## 联系方式

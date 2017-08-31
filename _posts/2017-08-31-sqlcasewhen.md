@@ -4,7 +4,7 @@ title: sql中case when的运用
 description: case when在分数统计中的使用
 keywords: sql
 categories : [database]
-tags : [case when,sql]
+tags : [sql]
 ---
 
 sql中case when的语句用的较少，记录一下

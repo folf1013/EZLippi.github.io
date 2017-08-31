@@ -4,7 +4,7 @@ title: 一次有意思的抽奖活动
 description: 利用redis,zk锁实现的抽奖方案
 keywords: 抽奖
 categories : [案例]
-tags : [抽奖,redis,锁]
+tags : [高并发]
 ---
 
 一次有意思的抽奖方案。
@@ -15,7 +15,7 @@ tags : [抽奖,redis,锁]
 由于之前并没有进行过抽奖，没有相关数据进行参考，故每天投放的奖品数和中奖的概率需要可以手动调节。
 
 ## 设计方案
-![image](/img/luckydraw.png)
+![image](/images/luckydraw.png)
 
 
 ## 每个用户点每天击n次设计
