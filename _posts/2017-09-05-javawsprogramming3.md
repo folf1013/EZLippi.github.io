@@ -4,7 +4,7 @@ title: java websocket programming(生命周期)
 description: java websocket programming
 keywords: websocket
 categories : [websocket系列]
-tags : [java websocket编程学习笔记]
+tags : [websocket]
 ---
 
 与http的请求，响应的模式不同，websocket具有生命周期。
