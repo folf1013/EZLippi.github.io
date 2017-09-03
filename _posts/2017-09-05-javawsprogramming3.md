@@ -25,7 +25,7 @@ websocket协议主要用于传输短消息，但是并没有限制消息的大�
 
 # Java websocket生命周期
 
-![](/image/pimg/wsmsg3.png)
+![](/images/pimg/wsmsg3.png)
 
 总的来说就是4个过程，建立连接，传送消息，错误处理，连接关闭。
 有点错误是可以恢复的，有的错误会导致连接关闭。
