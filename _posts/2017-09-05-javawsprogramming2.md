@@ -4,7 +4,7 @@ title: java websocket programming(基本原理)
 description: java websocket programming
 keywords: websocket
 categories : [websocket系列]
-tags : [java websocket编写学习笔记]
+tags : [java websocket编程学习笔记]
 ---
 
 本章节讲述了java websocket编程的基本原理，流程。
