@@ -27,15 +27,19 @@ websocket对象的另外一端。
 - RemoteEndpoint.Async异步发送。
 
 ## session
+
 每一个客户端到服务器的连接信息都保存在一个session的实例中。
 
 ## EndpointConfig
+
 表示websocket端点的配置信息，比如说路径等。
 
 ## MessageHandler接口
+
 接收入站消息的方式，比如说部分接收还是全部接收，以文本类型还是二进制类型。
 
 ## ServerApplicationConfig
+
 该类允许开发人员配置应用中的接口。
 
 ```
