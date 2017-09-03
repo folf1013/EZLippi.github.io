@@ -4,7 +4,7 @@ title: java websocket programming(前言)
 description: java websocket programming
 keywords: websocket
 categories : [websocket系列]
-tags : [java websocket编程学习笔记]
+tags : [websocket]
 ---
 
 本章节讲述为什么产生websocket的协议的问题。
