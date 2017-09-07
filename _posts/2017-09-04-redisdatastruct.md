@@ -53,5 +53,29 @@ sortedSet提供了丰富的方法，可以分类为：
 - lex的前提是score一致
 
 
+# Set
 
+- string类型的无序集合
+- 集合成员是唯一的
+- 集合中最大的成员数为 2^32 - 1 
+
+## 命令
+
+命令 | 描述 | 返回值
+---|---|---
+sadd key member1 [member2...] | 添加member... | 返回添加的个数 
+scard key  | 返回key中set的个数 | 
+sdiff key [key2...] | key与key2...的差集 | 返回key与[key2...]的差集的元素
+sdiffstore destination key [key2...] | key与key2...的差集存到destination中 | 返回元素的个数
+sinter key [key2...] | 交集 | 返回交集的元素
+sinterstore destination key [key2...] | key与key2...的交集存到destination中 | 返回元素的个数
+sismember key member | member是否是key中元素 | 是：1 ，否:0
+smembers key | 返回key的所有元素
+smove source destination member | 将member从source移动到destination中
+spop key | 返回第一个元素，先进先出 | member
+srandmember key count | 从key中随机返回count个元素 | 返回的member
+srem key member [member...] | 从key中删除member... | 返回删除的元素个数
+sunion key [key...] | 求key的并集 | 返回并集的元素
+sunionstore destination key [key...] | 将key的并集存放到destination中 | 返回元素的个数
+sscan key curse [Match pattern] [offset count] | 匹配遍历key | 返回匹配上的元素
 
