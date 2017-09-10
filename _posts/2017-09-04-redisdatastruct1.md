@@ -1,13 +1,13 @@
 ---
 layout: post
-title: redis的数据结构
+title: redis的数据结构(上)
 description: redis的数据结构
 keywords: redis
 categories : [缓存]
 tags : [redis]
 ---
 
-redis支持List,Set,SortedSet,Hash,String等数据结构。
+redis支持List,Set,SortedSet,Hash,String等数据结构。本文分析了Set和SortedSet缓存。
 
 # SortedSet
 
@@ -79,3 +79,4 @@ sunion key [key...] | 求key的并集 | 返回并集的元素
 sunionstore destination key [key...] | 将key的并集存放到destination中 | 返回元素的个数
 sscan key curse [Match pattern] [offset count] | 匹配遍历key | 返回匹配上的元素
 
+set提供的方法与sorted的方法类似，提供了添加，删除，交集，并集，个数等防范。
