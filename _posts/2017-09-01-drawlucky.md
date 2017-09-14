@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一次有意思的抽奖活动
-description: 利用redis,zk锁实现的抽奖方案
+description: 利用redis实现的抽奖方案
 keywords: 抽奖
 categories : [案例]
 tags : [高并发]
@@ -16,6 +16,10 @@ tags : [高并发]
 
 ## 设计方案
 ![](/images/pimg/drawlucky.png)
+
+## 绳子是否存在
+
+在redis中Set存有所有的绳子，请求过来可以直接判断绳子是否有效。
 
 ## 每个用户点每天击n次设计
 
@@ -42,9 +46,17 @@ key中dateStr当天的时间,每天产生一个key,同时给key设置超时时�
 ```
 
 ## 前4等奖每个用户只能中一次
-添加zk锁，创建节点成功则获取锁，否则获取锁失败，锁的粒度为每个用户一个锁。当一个抽中前4等奖时，
-添加锁，若是获取锁失败(正常情况下，一个用户只能在一个地方登陆，这种情况可能是刷奖)，则将该请求直接丢弃，
-若是获取锁，判断该用户是否中过前4等奖
+```
+String key = flag  + userid;
+Long leftCount = jedis.decrBy(key,1L);
+if(leftCount + 1 >= 0){
+   return true
+}
+return false;
+每天产生一个key,同时给key设置超时时间7天
+```
+每次抽中前4等奖，执行下decrby方法判断活动期间是否中过。
+
 
 ## 奖品的投放
 将所有的奖品投放到奖品总池中(redis中)，每天通过调用接口，手动将奖品从奖品总池取到奖品分发池(redis)中，
