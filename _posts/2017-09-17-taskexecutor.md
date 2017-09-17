@@ -3,7 +3,7 @@ layout: post
 title: java线程池原理
 description: java线程池的内部实现
 keywords: 线程池
-categories : [高并发]
+categories : [多线程]
 tags : [高并发]
 ---
 
