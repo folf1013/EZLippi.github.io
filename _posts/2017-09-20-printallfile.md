@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 打印文件为一行
-description: 打印文件为一行
+title: 多行打印成一行
+description: 多行打印成一行
 keywords: shell
 categories : [shell]
 tags : [shell]
