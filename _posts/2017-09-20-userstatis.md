@@ -59,10 +59,10 @@ grep -v null
 文本处理，按行，默认空格分隔 $0(所有行) $n(第n行)
 
 - cut 
-擅长处理“以一个字符间隔”的文本内容。
--b:byte,字节  
--c:char,字符  
--f:field,域  
+擅长处理“以一个字符间隔”的文本内容。  
+-b:byte,字节    
+-c:char,字符    
+-f:field,域    
 
 - sort  
 排序 sort -u = sort | uniq
