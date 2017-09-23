@@ -47,15 +47,15 @@ find . -type f | grep -v used_user_all | sort -r | grep -v history_use |  grep -
 
 # 常用命令
 
-- date
+- date  
 echo `date "+%G-%m-%d"`   
 2017-09-21
 
-- grep
+- grep  
 grep -v null  
 去掉包含null的行
 
-- awk
+- awk    
 文本处理，按行，默认空格分隔 $0(所有行) $n(第n行)
 
 - cut 
@@ -64,11 +64,11 @@ grep -v null
 -c:char,字符  
 -f:field,域  
 
-- sort
+- sort  
 排序 sort -u = sort | uniq
 
-- arges与管道命令
-管道:将前面的标准输出作为后面的标准输入。  
+- arges与管道命令  
+管道:将前面的标准输出作为后面的标准输入。    
 xargs:是实现“将标准输入作为命令的参数。  
 
 ``
@@ -78,12 +78,12 @@ echo "--help"|xargs cat
 输出帮助信息
 ``
 
-- sed
+- sed  
 查找与替换 sed 's/查找的内容/替换的内容/(g替换全部和替换第一个的区别)'
 
-- uniq
+- uniq  
 对应相邻的重复行去掉重复行。
 
-- find
+- find  
 find查找 -type为类型，f为文件
 
