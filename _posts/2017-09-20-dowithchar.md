@@ -97,19 +97,98 @@ less比more更强大，提供搜索功能。
 # grep
 
 ```
-显示file文件里匹配foo字串那行以及上下5行。  
-grep -C 5 foo file 
+显示file文件里匹配foo字串那行以及上下5行。    
+grep -C 5 foo file   
 
-显示foo及前5行。  
-grep -B 5 foo file
+显示foo及前5行。    
+grep -B 5 foo file  
 
-显示foo及后5行。
-grep -A 5 foo file 
+显示foo及后5行。  
+grep -A 5 foo file   
 
-去掉含有null的行
-grep -v null
+去掉含有null的行  
+grep -v null  
 
 ```
+
+# sed
+
+默认按行处理  
+
+a:新增  
+
+```
+nl a.txt | sed '2a i am a team'  
+nl a.txt | sed '2a\i am a team'  
+输出时，在第三行加一行 i am a team  
+
+```
+
+d：删除
+
+```
+ nl a.txt | sed  '2,3d'  
+输出时，删掉2到3行  
+
+$:结束
+nl a.txt | sed  '2,$d'  
+输出时，删掉2行到最后一行  
+
+```
+
+i:插入
+
+```
+nl a.txt | sed '2i i am a team'  
+输出时，在第2行前加一行 i am a team  
+
+```
+
+c:替换
+
+```
+nl a.txt | sed '2,3c replace 2-3'  
+将2-3行替换为replace 2-3  
+```
+
+
+
+np：只显示
+
+```
+nl a.txt | sed -n '2,3p'   
+只显示2-3行  
+
+```
+
+n:搜索
+
+```
+nl a.txt | sed -n '/root/p'  
+搜索root所在的行，并且显示出来  
+
+```
+
+替换：
+
+```
+sed 's/要被取代的字串/新的字串/g'     
+g:没有则替换每行第一个，否则全部替换。   
+
+nl a.txt | sed 's/root/folf/g'   
+将root修改为folf  
+
+```
+
+e:多点编辑
+
+```
+nl /etc/passwd | sed -e '3,$d' -e 's/bash/blueshell/'  
+-e表示多点编辑，第一个编辑命令删除/etc/passwd第三行到末尾的数据，第二条命令搜索bash替换为blueshell。  
+
+```
+
+
 
 
 
